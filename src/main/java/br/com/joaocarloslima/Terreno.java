@@ -1,5 +1,7 @@
 package br.com.joaocarloslima;
 
+import java.util.ArrayList;
+
 public class Terreno {
 
     Batata batata;

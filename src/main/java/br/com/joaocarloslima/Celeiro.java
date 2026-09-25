@@ -1,21 +1,21 @@
 package br.com.joaocarloslima;
 
 public class Celeiro {
-    private int capacidade;
-    private int qtdBatatas;
-    private int qtdCenouras;
-    private int qtdMorangos;
+    private int capacidade = 20;
+    private int qtdBatatas = 2;
+    private int qtdCenouras = 2;
+    private int qtdMorangos = 2;
 
     public void armazenarBatata(){
-        qtdBatatas++;
+        qtdBatatas+=2;
     }
 
     public void armazenarCenoura(){
-        qtdCenouras++;
+        qtdCenouras+=2;
     }
 
     public void armazenarMorango(){
-        qtdMorangos++;
+        qtdMorangos+=2;
     }
 
     public void consumirBatata(){
@@ -47,15 +47,15 @@ public class Celeiro {
         return capacidade;
     }
 
-    public int getQtdBatatas() {
+    public int getQtdeBatatas() {
         return qtdBatatas;
     }
 
-    public int getQtdCenouras() {
+    public int getQtdeCenouras() {
         return qtdCenouras;
     }
 
-    public int getQtdMorangos() {
+    public int getQtdeMorangos() {
         return qtdMorangos;
     }
 
