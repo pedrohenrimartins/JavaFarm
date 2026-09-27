@@ -31,15 +31,15 @@ public class Terreno {
     }
 
     public void colher(Celeiro celeiro){
-        if(getBatata() != null){
+        if(getBatata() != null && getBatata().podeColher() == true){
          celeiro.armazenarBatata();
          batata = null;
         }
-        if(getCenoura() != null){
+        if(getCenoura() != null && getCenoura().podeColher() == true){
             celeiro.armazenarCenoura();
             cenoura = null;
         }
-        if(getMorango() != null){
+        if(getMorango() != null && getMorango().podeColher() == true){
             celeiro.armazenarMorango();
             morango = null;
         }

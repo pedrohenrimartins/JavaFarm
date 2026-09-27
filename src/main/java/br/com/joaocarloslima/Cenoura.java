@@ -1,15 +1,24 @@
 package br.com.joaocarloslima;
 
 public class Cenoura {
+   
+        private int tamanho = 1;
+        private int tempoDeVida = 0;
+        private int tempoDeCrescimento = 3;
 
-    private int tamanho = 1;
-    private int tempoDeVida = 0;
-    private int tempoDeCrescimento = 3;
 
+        public void crescer(){
+            if(tamanho<=4){
+            tempoDeVida++;
+            
+            if(tempoDeVida == tempoDeCrescimento){
 
-    public void crescer(){
-        tempoDeVida++;
-        if(tempoDeVida == tempoDeCrescimento)tamanho++;
+                
+                tamanho++;
+                tempoDeVida= 0;
+            }
+            
+        }
     }
 
     public boolean podeColher(){
@@ -17,7 +26,7 @@ public class Cenoura {
     }
 
     public String getImagem(){
-        return "images/cenoura" +tamanho+".png";
+        return "images/cenoura"+tamanho+".png";
     }
 
 
