@@ -2,14 +2,20 @@ package br.com.joaocarloslima;
 
 public class Morango {
 
-    private int tamanho = 1;
-    private int tempoDeVida = 0;
-    private int tempoDeCrescimento = 3;
+        private int tamanho = 1;
+        private int tempoDeVida = 0;
+        private int tempoDeCrescimento = 3;
 
 
-    public void crescer(){
-        tempoDeVida++;
-        if(tempoDeVida == tempoDeCrescimento)tamanho++;
+        public void crescer(){
+            if (tamanho < 4) {
+                tempoDeVida++;
+
+                if (tempoDeVida == tempoDeCrescimento) {
+                    tamanho++;
+                    tempoDeVida = 0;
+                }
+            }
     }
 
     public boolean podeColher(){
@@ -17,6 +23,6 @@ public class Morango {
     }
 
     public String getImagem(){
-        return "images/morango" +tamanho+".png";
+        return "images/morango"+tamanho+".png";
     }
 }

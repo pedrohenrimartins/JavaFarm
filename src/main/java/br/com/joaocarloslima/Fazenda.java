@@ -22,43 +22,28 @@ public class Fazenda {
         }
     }
 
-    public void plantarBatata(int x, int y) {
-
-        if (celeiro.getQtdeBatatas() > 0 && !getTerreno(x, y).estaOcupado()) {
-            Batata batata = new Batata();
-            getTerreno(x, y).plantar(batata);
-            terrenos.add(new Terreno(x, y));
-
+    public void plantarBatata(int x, int y) throws Exception {
+        if (!getTerreno(x, y).estaOcupado()) {
             celeiro.consumirBatata();
+            getTerreno(x, y).plantar(new Batata());
         }
-
     }
 
-    public void plantarCenoura(int x, int y) {
-
-        if (celeiro.getQtdeCenouras() > 0 && !getTerreno(x, y).estaOcupado()) {
-            Cenoura cenoura = new Cenoura();
-            getTerreno(x, y).plantar(cenoura);
-            terrenos.add(new Terreno(x, y));
-
+    public void plantarCenoura(int x, int y) throws Exception {
+        if (!getTerreno(x, y).estaOcupado()) {
             celeiro.consumirCenoura();
+            getTerreno(x, y).plantar(new Cenoura());
         }
-
     }
 
-    public void plantarMorango(int x, int y) {
-
-        if (celeiro.getQtdeMorangos() > 0 && !getTerreno(x, y).estaOcupado()) {
-            Morango morango = new Morango();
-            getTerreno(x, y).plantar(morango);
-            terrenos.add(new Terreno(x, y));
-
+    public void plantarMorango(int x, int y) throws Exception {
+        if (!getTerreno(x, y).estaOcupado()) {
             celeiro.consumirMorango();
+            getTerreno(x, y).plantar(new Morango());
         }
-
     }
 
-    public void colher(int x, int y) {
+    public void colher(int x, int y) throws Exception {
         getTerreno(x, y).colher(celeiro);
     }
 

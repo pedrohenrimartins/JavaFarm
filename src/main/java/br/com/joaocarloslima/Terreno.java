@@ -30,20 +30,19 @@ public class Terreno {
 
     }
 
-    public void colher(Celeiro celeiro){
-        if(getBatata() != null){
-         celeiro.armazenarBatata();
-         batata = null;
+    public void colher(Celeiro celeiro) throws Exception {
+        if (getBatata() != null && getBatata().podeColher()) {
+            celeiro.armazenarBatata();
+            batata = null;
         }
-        if(getCenoura() != null){
+        if (getCenoura() != null && getCenoura().podeColher()) {
             celeiro.armazenarCenoura();
             cenoura = null;
         }
-        if(getMorango() != null){
+        if (getMorango() != null && getMorango().podeColher()) {
             celeiro.armazenarMorango();
             morango = null;
         }
-
     }
 
 

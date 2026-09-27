@@ -8,12 +8,20 @@ public class Batata {
 
 
         public void crescer(){
-            tempoDeVida++;
-            if(tempoDeVida == tempoDeCrescimento)tamanho++;
+            if (tamanho < 4) {
+                tempoDeVida++;
+
+                if (tempoDeVida == tempoDeCrescimento) {
+                    tamanho++;
+                    tempoDeVida = 0;
+                }
+            }
+            
+
         }
 
         public boolean podeColher(){
-            return tamanho== 4;
+            return tamanho == 4;
         }
 
         public String getImagem(){

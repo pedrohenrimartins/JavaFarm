@@ -6,27 +6,45 @@ public class Celeiro {
     private int qtdeCenouras = 2;
     private int qtdeMorangos = 2;
 
-    public void armazenarBatata(){
-        qtdeBatatas+=2;
+    public void armazenarBatata() throws Exception {
+        if (getEspacoDisponivel() < 2) {
+            throw new Exception("O celeiro está cheio!");
+        }
+        qtdeBatatas += 2;
     }
 
-    public void armazenarCenoura(){
-        qtdeCenouras+=2;
+    public void armazenarCenoura() throws Exception {
+        if (getEspacoDisponivel() < 2) {
+            throw new Exception("O celeiro está cheio!");
+        }
+        qtdeCenouras += 2;
     }
 
-    public void armazenarMorango(){
-        qtdeMorangos+=2;
+    public void armazenarMorango() throws Exception {
+        if (getEspacoDisponivel() < 2) {
+            throw new Exception("O celeiro está cheio!");
+        }
+        qtdeMorangos += 2;
     }
 
-    public void consumirBatata(){
+    public void consumirBatata() throws Exception {
+        if (qtdeBatatas <= 0) {
+            throw new Exception("Não há batatas no celeiro!");
+        }
         qtdeBatatas--;
     }
 
-    public void consumirCenoura(){
+    public void consumirCenoura() throws Exception {
+        if (qtdeCenouras <= 0) {
+            throw new Exception("Não há cenouras no celeiro!");
+        }
         qtdeCenouras--;
     }
 
-    public void consumirMorango(){
+    public void consumirMorango() throws Exception {
+        if (qtdeMorangos <= 0) {
+            throw new Exception("Não há morangos no celeiro!");
+        }
         qtdeMorangos--;
     }
 
@@ -34,8 +52,8 @@ public class Celeiro {
          return capacidade - (qtdeBatatas + qtdeMorangos + qtdeCenouras);
     }
 
-    public int getOcupacao(){
-        return ((qtdeBatatas + qtdeMorangos + qtdeCenouras) / capacidade) * 100;
+    public double getOcupacao(){
+        return (qtdeBatatas + qtdeMorangos + qtdeCenouras) / capacidade;
     }
 
 
