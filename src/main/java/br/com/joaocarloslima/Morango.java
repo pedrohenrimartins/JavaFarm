@@ -17,6 +17,6 @@ public class Morango {
     }
 
     public String getImagem(){
-        return "images/morango" +tamanho+";png";
+        return "images/morango" +tamanho+".png";
     }
 }

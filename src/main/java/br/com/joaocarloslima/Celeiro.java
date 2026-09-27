@@ -2,45 +2,45 @@ package br.com.joaocarloslima;
 
 public class Celeiro {
     private int capacidade = 20;
-    private int qtdBatatas = 2;
-    private int qtdCenouras = 2;
-    private int qtdMorangos = 2;
+    private int qtdeBatatas = 2;
+    private int qtdeCenouras = 2;
+    private int qtdeMorangos = 2;
 
     public void armazenarBatata(){
-        qtdBatatas+=2;
+        qtdeBatatas+=2;
     }
 
     public void armazenarCenoura(){
-        qtdCenouras+=2;
+        qtdeCenouras+=2;
     }
 
     public void armazenarMorango(){
-        qtdMorangos+=2;
+        qtdeMorangos+=2;
     }
 
     public void consumirBatata(){
-        qtdBatatas--;
+        qtdeBatatas--;
     }
 
     public void consumirCenoura(){
-        qtdCenouras--;
+        qtdeCenouras--;
     }
 
     public void consumirMorango(){
-        qtdMorangos--;
+        qtdeMorangos--;
     }
 
     public int getEspacoDisponivel(){
-         return capacidade - (qtdBatatas + qtdMorangos + qtdCenouras);
+         return capacidade - (qtdeBatatas + qtdeMorangos + qtdeCenouras);
     }
 
     public int getOcupacao(){
-        return ((qtdBatatas + qtdMorangos + qtdCenouras) / capacidade) * 100;
+        return ((qtdeBatatas + qtdeMorangos + qtdeCenouras) / capacidade) * 100;
     }
 
 
     public boolean celeiroCheio(){
-        return (qtdCenouras + qtdBatatas + qtdMorangos) >= capacidade;
+        return (qtdeCenouras + qtdeBatatas + qtdeMorangos) >= capacidade;
     }
 
     public int getCapacidade() {
@@ -48,15 +48,15 @@ public class Celeiro {
     }
 
     public int getQtdeBatatas() {
-        return qtdBatatas;
+        return qtdeBatatas;
     }
 
     public int getQtdeCenouras() {
-        return qtdCenouras;
+        return qtdeCenouras;
     }
 
     public int getQtdeMorangos() {
-        return qtdMorangos;
+        return qtdeMorangos;
     }
 
 

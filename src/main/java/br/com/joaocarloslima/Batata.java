@@ -17,7 +17,7 @@ public class Batata {
         }
 
         public String getImagem(){
-            return "images/batata" +tamanho+";png";
+            return "images/batata" +tamanho+".png";
         }
 
 }

@@ -16,7 +16,7 @@ public class Terreno {
     }
 
     public void plantar(Batata batata){
-        this.batata = batata;
+        this.batata = batata; 
     }
     public void plantar(Cenoura cenoura){
         this.cenoura = cenoura;

@@ -17,7 +17,7 @@ public class Cenoura {
     }
 
     public String getImagem(){
-        return "images/cenoura" +tamanho+";png";
+        return "images/cenoura" +tamanho+".png";
     }
 
 
