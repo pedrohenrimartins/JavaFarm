@@ -21,6 +21,8 @@ public class Batata {
         }
     }
 
+
+
         public boolean podeColher(){
             return tamanho == 4;
         }
