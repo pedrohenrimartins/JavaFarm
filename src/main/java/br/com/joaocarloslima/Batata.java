@@ -8,17 +8,18 @@ public class Batata {
 
 
         public void crescer(){
-            if (tamanho < 4) {
-                tempoDeVida++;
+            if(tamanho<=4){
+            tempoDeVida++;
+            
+            if(tempoDeVida == tempoDeCrescimento){
 
-                if (tempoDeVida == tempoDeCrescimento) {
-                    tamanho++;
-                    tempoDeVida = 0;
-                }
+                
+                tamanho++;
+                tempoDeVida= 0;
             }
             
-
         }
+    }
 
         public boolean podeColher(){
             return tamanho == 4;

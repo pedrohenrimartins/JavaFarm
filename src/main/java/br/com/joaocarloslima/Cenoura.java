@@ -8,16 +8,17 @@ public class Cenoura {
 
 
         public void crescer(){
-            if (tamanho < 4) {
-                tempoDeVida++;
+            if(tamanho<=4){
+            tempoDeVida++;
+            
+            if(tempoDeVida == tempoDeCrescimento){
 
-                if (tempoDeVida == tempoDeCrescimento) {
-                    tamanho++;
-                    tempoDeVida = 0;
-                }
+                
+                tamanho++;
+                tempoDeVida= 0;
             }
             
-
+        }
     }
 
     public boolean podeColher(){
