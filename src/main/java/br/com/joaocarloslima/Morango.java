@@ -8,15 +8,14 @@ public class Morango {
 
 
         public void crescer(){
-            if(tamanho<=4){
-            tempoDeVida++;
-            
-            if(tempoDeVida == tempoDeCrescimento){
+            if (tamanho < 4) {
+                tempoDeVida++;
 
-                
-                tamanho++;
-                tempoDeVida= 0;
-            }
+                if (tempoDeVida == tempoDeCrescimento) {
+                    tamanho++;
+                    tempoDeVida = 0;
+                }
+
             
         }
 
